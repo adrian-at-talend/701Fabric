@@ -1,12 +1,54 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:import namespace="http://www.w3.org/2001/XMLSchema"/>
 <xsd:element name="Client">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
 <xsd:complexType>
 <xsd:all>
-<xsd:element name="ClientId" type="UUID"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="FName" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="LName" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="NINo" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="Postcode" type="xsd:string"/>
+<xsd:element name="ClientId" type="UUID">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="FName" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="LName" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="NINo" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="Postcode" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 </xsd:all>
 </xsd:complexType>
 <xsd:unique name="Client">
@@ -18,17 +60,62 @@
 <xsd:restriction base="xsd:string"/>
 </xsd:simpleType>
 <xsd:element name="SourceClient">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
 <xsd:complexType>
 <xsd:all>
-<xsd:element name="SourceClientId" type="UUID"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="SourceFName" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="SourceLName" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="SourceNINo" type="xsd:string"/>
-<xsd:element maxOccurs="1" minOccurs="0" name="SourcePostcode" type="xsd:string"/>
+<xsd:element name="SourceClientId" type="UUID">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="SourceFName" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="SourceLName" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="SourceNINo" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+<xsd:element maxOccurs="1" minOccurs="0" name="SourcePostcode" type="xsd:string">
+<xsd:annotation>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 <xsd:element maxOccurs="1" minOccurs="0" name="ClientId" type="xsd:string">
 <xsd:annotation>
 <xsd:appinfo source="X_ForeignKey">Client/ClientId</xsd:appinfo>
 <xsd:appinfo source="X_ForeignKey_NotSep">true</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterAdmin</xsd:appinfo>
+<xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
+<xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
+<xsd:appinfo source="X_Write">Validator</xsd:appinfo>
 </xsd:annotation>
 </xsd:element>
 </xsd:all>
