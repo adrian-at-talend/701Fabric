@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><mdmserverobject:WSRoleE xmlns:mdmserverobject="http://www.talend.org/mdmserverobject" xmlns:xmi="http://www.omg.org/XMI" description="[EN:Normal User]" lastServerName="localhost" name="Stewardbasic" xmi:id="_WZZp4LHKEeipkYhYoZKGQA" xmi:version="2.0">
+  <specification objectType="" xmi:id="_WZZp4bHKEeipkYhYoZKGQA"/>
+  <specification admin="true" objectType="Transformer V2" xmi:id="_WZZp4rHKEeipkYhYoZKGQA"/>
+  <specification objectType="Data Cluster" xmi:id="_WZZp47HKEeipkYhYoZKGQA">
+    <instance instanceName="SimpleModel" xmi:id="_WZZp5LHKEeipkYhYoZKGQA"/>
+    <instance instanceName="UpdateReport" writable="true" xmi:id="_WZZp5bHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+    <instance instanceName="PROVISIONING" writable="true" xmi:id="_WZZp5rHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+  </specification>
+  <specification admin="true" objectType="Transformer" xmi:id="_WZZp57HKEeipkYhYoZKGQA"/>
+  <specification objectType="Stored Procedure" xmi:id="_WZZp6LHKEeipkYhYoZKGQA"/>
+  <specification objectType="Service" xmi:id="_WZZp6bHKEeipkYhYoZKGQA"/>
+  <specification objectType="View" xmi:id="_WZZp6rHKEeipkYhYoZKGQA">
+    <instance instanceName="Browse_items_simpleone" xmi:id="_WZZp67HKEeipkYhYoZKGQA"/>
+  </specification>
+  <specification objectType="Routing Rule" xmi:id="_WZZp7LHKEeipkYhYoZKGQA">
+    <instance instanceName=".*" xmi:id="_WZZp7bHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+  </specification>
+  <specification objectType="Background Job" xmi:id="_WZZp7rHKEeipkYhYoZKGQA"/>
+  <specification objectType="Role" xmi:id="_WZZp77HKEeipkYhYoZKGQA">
+    <instance instanceName=".*" xmi:id="_WZZp8LHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+  </specification>
+  <specification admin="true" objectType="Item" xmi:id="_WZZp8bHKEeipkYhYoZKGQA"/>
+  <specification objectType="Routing Engine V2" xmi:id="_WZZp8rHKEeipkYhYoZKGQA"/>
+  <specification objectType="Data Model" xmi:id="_WZZp87HKEeipkYhYoZKGQA">
+    <instance instanceName="SimpleModel" xmi:id="_WZZp9LHKEeipkYhYoZKGQA"/>
+    <instance instanceName="UpdateReport" xmi:id="_WZZp9bHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+    <instance instanceName="CONF" xmi:id="_WZZp9rHKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+    <instance instanceName="PROVISIONING" xmi:id="_WZZp97HKEeipkYhYoZKGQA">
+      <parameter/>
+    </instance>
+  </specification>
+  <specification admin="true" objectType="Transformer Plugin V2" xmi:id="_WZZp-LHKEeipkYhYoZKGQA"/>
+  <specification admin="true" objectType="Routing Order V2 Failed" xmi:id="_WZZp-bHKEeipkYhYoZKGQA"/>
+  <specification admin="true" objectType="Transformer Plugin" xmi:id="_WZZp-rHKEeipkYhYoZKGQA"/>
+  <specification objectType="Menu" xmi:id="_WZZp-7HKEeipkYhYoZKGQA">
+    <instance instanceName="Hierarchy" xmi:id="_WZZp_LHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="Search" xmi:id="_WZZp_bHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="WelcomePortal" writable="true" xmi:id="_WZZp_rHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="BonitaWorkflowTasks" xmi:id="_WZZp_7HKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="RecycleBin" xmi:id="_WZZqALHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="Datastewardship" xmi:id="_WZZqAbHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="CrossReference" xmi:id="_WZZqArHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="UpdateReport" xmi:id="_WZZqA7HKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="StagingArea" xmi:id="_WZZqBLHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="BrowseRecordsInStaging" writable="true" xmi:id="_WZZqBbHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+    <instance instanceName="BrowseRecords" writable="true" xmi:id="_WZZqBrHKEeipkYhYoZKGQA">
+      <parameter><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<role-menu-parameters position="1"><parent-iD></parent-iD></role-menu-parameters>]]></parameter>
+    </instance>
+  </specification>
+  <specification admin="true" objectType="Routing Order V2 Completed" xmi:id="_WZZqB7HKEeipkYhYoZKGQA"/>
+  <specification objectType="Configuration Info" xmi:id="_WZZqCLHKEeipkYhYoZKGQA"/>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1619f7c1-c636-4421-829e-366accb48e4d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dl98Khdn2ta1/SR5rgOvBilbmbRtshHkaAeQnBU9/ValPGRkP27Jh2d6lsRcVuJ55jIuGJsh+roh
+o7cd9v/5MQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2d750c5e-a3c2-4508-8da7-7a653763c571"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>iF/4WZGelkUHCcoOCQ3PjhYg1p6f/SieWGVOEDKMF5PWMTQj9OeDyPpyDpFWPZ1YvHSX+t9LDDMR
+Fge6X0C80A==</DigestValue></Reference></SignedInfo><SignatureValue>h6WJ9mKpjIVTG4ZBHBNgwYkcRL5vFCF230B18aGeOPhQIbLo2XOVIoMI1wuek5l25OOn5Y2MGn6J
+qwQL3wAkQ1DKceClTif+kVnDcmPk6SFKMJD6+LcHUPdW661uq41376inko24lQ2Tqtx/1L7l6aVk
+bqFgoN806JuwaQqo8X0F/HgdQDq7BQoUdallP627W00KyGNy87EIe1j7DZcp76HCu+i4eVLRp4Tq
+dpuQKFaNH0gF3JGOn6rphaAtqI+fLIkCe2fT09DijNLA+BXm2nk797EPpiYtLEkHz6dM+kbIKehL
+Y29tLfg9hVqN9c6Uc5kJyJUKEcdZ7dkGV+wgmw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
+RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
+LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
+VQQIDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1ImRDEpMCcGA1UEAwwg
+RGVmYXVsdCBjb2RlLXNpZ25pbmcgY2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDiCz1II/o6hDUWu/ygxTCT2o/fYxVzPW23AoONQC/Vuiqh0COyLIgaMTjBPmQdTQFq
+rmM5tD64gi4TEQF+Z3iYt3daLdQUfaW9SzaMlY+XVNz5xnMBVDuiSHJSFE9lKnhgbKAHvOeoJo46
+UgWwb1za0WpRckDtjKcntwEK1orZCgrcIo1nDvFXyB5n0KfpLyktEOa0bSHde50MPbvQeB66XlEb
+lhjfs5S9WnAUja9RgqdwqZoI0ss+x/pjkQygDT8f17MktM21HOtg09lJlhMGJckhgD7jUF5tfYGM
+sv/O27g5CToFhxOnutDtsrDw7AkEQIml8KJp97bQLAFlLnh1AgMBAAGjge0wgeowHQYDVR0OBBYE
+FFzdy6ZfpUX8JwkM/SUrqkwLNqWAMB8GA1UdIwQYMBaAFOd9C3L8tYGZxoAr2SzsgnMytaj3MAsG
+A1UdDwQEAwIHgDATBgNVHSUEDDAKBggrBgEFBQcDAzAJBgNVHRMEAjAAMHsGCWCGSAGG+EIBDQRu
+FmxEZWZhdWx0IHRoaXJkIHBhcnR5IGNvZGUtc2lnbmluZyBjZXJ0aWZpY2F0ZS4gTm8gY29tbWl0
+bWVudCBpcyBtYWRlIG9uIHRoZSBjb250ZW50IHNpZ25lZCBieSB0aGUgdGhpcmQgcGFydHkwDQYJ
+KoZIhvcNAQELBQADggIBAKzYdnzoFgrRtDLSSzWtwuOrGo5+1RPoDHm/1dlbVnB7oZzUwfRGwZT5
+ser0V7OZyt9wWR8iQ2ka30fHWrNAosNtlIkF88s5YZw7OOIMxR+qYA99BnWLa79DZVIuukI2f5qJ
+Cr9nw6Oygo8CWeNMWhtXcvV4gqROhb2QMBrvWBw9QvNK1XMdtPShfWiXwyPzzRKgwqrN2meXtOY3
+S+MXu6u+RUD9EYeElp9M+9Yp+zRySl5/s+0sbvo7qz369dlsw8XhKXT+s4YQQe3Sx14Kg3SDFXKn
+QcVgycaZMOw4YUxOeP2hKOHnNuOMORfu3qlYkN/0RMGjn6r4PU4+yL276TiWI5b8J06y4leng2as
+r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
+EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
+BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
+6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2d750c5e-a3c2-4508-8da7-7a653763c571" Target="#_1619f7c1-c636-4421-829e-366accb48e4d"><Timestamp>2018-09-06 12:45:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></mdmserverobject:WSRoleE>
