@@ -116,6 +116,9 @@
 <xsd:appinfo source="X_Write">MasterUser</xsd:appinfo>
 <xsd:appinfo source="X_Write">Stewardbasic</xsd:appinfo>
 <xsd:appinfo source="X_Write">Validator</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">Client/FName</xsd:appinfo>
+<xsd:appinfo source="X_ForeignKeyInfo">Client/LName</xsd:appinfo>
+<xsd:appinfo source="X_Retrieve_FKinfos">true</xsd:appinfo>
 </xsd:annotation>
 </xsd:element>
 </xsd:all>
