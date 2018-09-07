@@ -14,6 +14,7 @@
     <module>jobs/process/resolve_demerge_client_0.1</module>
     <module>jobs/process/copy_of_resolve_demerge_client_0.1</module>
     <module>jobs/process/testsynonym_0.1</module>
+    <module>jobs/process/testbuildnamesynonym_0.1</module>
   </modules>
   <properties>
     <talend.project.name>FABRIC701</talend.project.name>
