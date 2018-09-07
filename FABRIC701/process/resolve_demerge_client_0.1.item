@@ -112,7 +112,7 @@
     <routinesParameter id="_5JTJsLHFEeiY_Jo4avjRug" name="TalendStringUtil"/>
     <routinesParameter id="_5JJYsLHFEeiY_Jo4avjRug" name="TalendString"/>
   </parameters>
-  <node componentName="tDataStewardshipTaskInput" componentVersion="0.23.1" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+  <node componentName="tDataStewardshipTaskInput" componentVersion="0.23.1" offsetLabelX="0" offsetLabelY="0" posX="192" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataStewardshipTaskInput_1"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value="QUERYSTORE_TYPE : &quot;BUILT_IN&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
@@ -170,7 +170,7 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="224">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
     <elementParameter field="EXTERNAL" name="MAP" value=""/>
     <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
@@ -193,14 +193,7 @@
       <column comment="text" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
       </column>
-    </metadata>
-    <metadata connector="FLOW" name="updateChild">
-      <column comment="" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
-      </column>
-      <column comment="" key="false" length="-1" name="ClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
-        <additionalField key="AVRO_TECHNICAL_KEY" value="ClientId"/>
-      </column>
+      <column comment="" key="false" length="-1" name="NewClientId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties shellMaximized="true"/>
@@ -214,10 +207,7 @@
         <mapperTableEntries expression="row1.SourceNINo  " name="NINo" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.SourcePostcode  " name="Postcode" nullable="true" type="id_String"/>
         <mapperTableEntries expression="row1.SourceClientId " name="SourceClientId" nullable="true" type="id_String"/>
-      </outputTables>
-      <outputTables name="updateChild" sizeState="INTERMEDIATE">
-        <mapperTableEntries expression="row1.SourceClientId " name="SourceClientId" nullable="true" type="id_String"/>
-        <mapperTableEntries expression="MDM.createFK(Var.UUID) " name="ClientId" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="MDM.createFK(Var.UUID) " name="NewClientId" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="SourceClientId" nullable="true" type="id_String"/>
@@ -239,7 +229,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMDMOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="224">
+  <node componentName="tMDMOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMDMOutput_1"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_1zy-wLHLEeipkYhYoZKGQA"/>
@@ -336,6 +326,7 @@
       <column comment="text" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
       </column>
+      <column comment="" key="false" length="-1" name="NewClientId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="OUTPUT" label="ClientOut" name="OUTPUT">
       <column comment="" key="false" length="0" name="ClientId" nullable="true" pattern="" precision="0" type="id_String" usefulColumn="true"/>
@@ -346,6 +337,7 @@
       <column comment="text" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
       </column>
+      <column comment="" key="false" length="-1" name="NewClientId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="xml" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="ClientOut" name="REJECT">
@@ -357,12 +349,54 @@
       <column comment="text" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
         <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
       </column>
+      <column comment="" key="false" length="-1" name="NewClientId" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="xml" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tMDMOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="576" posY="320">
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="704" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_2"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_sc5jMLH_EeinpPF1I6f1tQ-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="updateOldChild">
+      <column comment="" key="false" length="-1" name="SourceClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="SourceClientId"/>
+      </column>
+      <column comment="" key="false" length="-1" name="ClientId" nullable="true" originalLength="-1" pattern="" precision="-1" type="id_String" usefulColumn="true">
+        <additionalField key="AVRO_TECHNICAL_KEY" value="ClientId"/>
+      </column>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="updateOldChild" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row2.SourceClientId " name="SourceClientId" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row2.NewClientId " name="ClientId" nullable="true" type="id_String"/>
+      </outputTables>
+      <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries name="ClientId" nullable="true" type="id_String"/>
+        <mapperTableEntries name="FName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="LName" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NINo" nullable="true" type="id_String"/>
+        <mapperTableEntries name="Postcode" nullable="true" type="id_String"/>
+        <mapperTableEntries name="SourceClientId" nullable="true" type="id_String"/>
+        <mapperTableEntries name="NewClientId" nullable="true" type="id_String"/>
+        <mapperTableEntries name="xml" nullable="true" type="id_String"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tMDMOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMDMOutput_2"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_1zy-wLHLEeipkYhYoZKGQA"/>
@@ -372,7 +406,7 @@
     <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" show="false" value="_1zy-wLHLEeipkYhYoZKGQA - SourceClientReceive"/>
     <elementParameter field="CHECK" name="IS_VIRTUAL_COMPONENT" value="true"/>
     <elementParameter field="COLUMN_LIST" name="XMLFIELD" value="SourceClientId"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="DOCUMENT" show="false" value="SourceClientId"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="DOCUMENT" show="false" value=""/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="SERVERVERSION" value="s60"/>
@@ -392,7 +426,7 @@
     <elementParameter field="RADIO" name="CUSTOM" show="false" value="true"/>
     <elementParameter field="TEXT" name="TASKID" show="false" value="&quot;&quot;"/>
     <elementParameter field="RADIO" name="PREV_COLUMN" show="false" value="false"/>
-    <elementParameter field="PREV_COLUMN_LIST" name="PREV_COLUMN_TASK_ID" show="false" value="SourceClientId"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PREV_COLUMN_TASK_ID" show="false" value=""/>
     <elementParameter field="CHECK" name="USE_PARTIAL_UPDATE" value="false"/>
     <elementParameter field="TEXT" name="PIVOT" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="OVERWRITE" show="false" value="false"/>
@@ -488,31 +522,38 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <connection connectorName="FLOW" label="newClient" lineStyle="0" metaname="newClient" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tMDMOutput_1">
+  <connection connectorName="FLOW" label="newClient" lineStyle="0" metaname="newClient" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMDMOutput_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="SourceClientId"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NewClientId"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="newClient"/>
   </connection>
-  <connection connectorName="FLOW" label="updateChild" lineStyle="0" metaname="updateChild" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tMDMOutput_2">
+  <connection connectorName="OUTPUT" label="row2" lineStyle="0" metaname="OUTPUT" offsetLabelX="0" offsetLabelY="0" source="tMDMOutput_1" target="tMap_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="updateChild"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="updateOldChild" lineStyle="0" metaname="updateOldChild" offsetLabelX="0" offsetLabelY="0" source="tMap_2" target="tMDMOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="updateOldChild"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataStewardshipTaskInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ae387a77-e517-4065-a64d-718b523996ea"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m4ZIBT2cUzOl/n/y5m1fhfPRnnYaxZORGYuqcg8OBGmD8DNOK3/u+Sla8nT3qkdbk/hIWXvljL/5
-+uKHzY3gzA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_55d4a6b6-d883-4c6e-a152-6e3c268445fa"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>nRho/tH9FdXEHogCebbzlZ+Xpn89XQdbgZ10coctgUJKuX8SHb6KNDHIzdcnWyTC8H0s7ZChEynG
-Oed49YlW5w==</DigestValue></Reference></SignedInfo><SignatureValue>hHXP1aBz8aWLG7rmgOdV1qE5uDyDGkWQzauQhhZzHei/C0UqkQVjaC7ybmFDZBvOMGF+Ee6pfVTz
-oZpu7F+tnnITd9qpo8cuEutBE+QqfIh0VUHKFSvcOJh/W6GgkYZk2/2GCG0aPswMx/TceFMqwRBo
-qkwZj3bLBZFk+8XhK3vjS8PsPaFfsVJJzIw1shMvvMhxpy6lqcdZrl9ZhMtCGmiXXrgVOAwihVY0
-827UHpnRxru8Y7rwawvHI1ABpQzbpV01GsAz8DHN2Vc6abYmnMU/0epuzphqEo7+PrPKGUpvjIkr
-Rg+pToLe5Gi0kDBoHjMEMZtk6nu0WwbWdKVGcQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9654962e-a98d-4ddb-b2d7-9fc33126a908"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TnMiEPyQ/0UzLIGu5+sK5sk4yHQ+92RrptewMyPt9Y6eyHLY5QJd/Tbd/tOyeeWVEb20PcUnlXOB
+60QwkaJ5bQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_90167883-e523-4646-a021-f8478a2c796c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tsGWt6P5SrZeRaXoMPJzRd5PvAmarp1tk/aF9ZaCOR80WbU3OU2FdmDEeNAAmXpUBoSpWhl8YSl9
+Awwf+bvxVw==</DigestValue></Reference></SignedInfo><SignatureValue>IZ/mDkBb9Dno8lVCBjSQ/fpF1Ud6ykntfcO+DhXA0iCUns4Jv+xccbSrcYhEtuoxq79LPUWf8J03
+a6ufK/WzaiHVxC0lOAW8w6ZN3i3Fy0MGMyCVokn8izk3Mo0kwgf7tdgHkYg7JbljB0gy080+6o7r
+Hocm404zZ1bSoD9YzB0eAqzijUJrg4eT2RPT/B0346cN2DlRz5OpCLsxL5/jE1IMyg1eYDBv7Z+d
+OVPJCH7JlSzi43gQXceVjTnXWjqE89FkMM+D6kwefBhNwGhEKtVwkIhv0toNvGV7a1vaBsz465MM
+LGw1No4BJ5hoXbQ37xJP4nxSugkrA/EnJtV1iw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -536,4 +577,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_55d4a6b6-d883-4c6e-a152-6e3c268445fa" Target="#_ae387a77-e517-4065-a64d-718b523996ea"><Timestamp>2018-09-06 19:57:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_90167883-e523-4646-a021-f8478a2c796c" Target="#_9654962e-a98d-4ddb-b2d7-9fc33126a908"><Timestamp>2018-09-07 09:06:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
